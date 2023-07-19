@@ -14,7 +14,6 @@ variables:
   imageRepository: 'apcichewiczresumeapp'
   containerRegistry: 'resumecontainerappregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/dockerfile'
-  tag: '$(Build.BuildId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -35,5 +34,5 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
+        tags: Latest
+  
