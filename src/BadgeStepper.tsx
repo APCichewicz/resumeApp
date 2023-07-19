@@ -1,13 +1,13 @@
     // a react component to create a styled image stepper with the images in .\assets\badges
 
-    import React, { useState, useEffect } from 'react'
+    import { useState, useEffect } from 'react'
     // import all images from .\assets\badges
-    import badge1 from '.\\assets\\badges\\badge1.png'
-    import badge2 from '.\\assets\\badges\\badge2.png'
-    import badge3 from '.\\assets\\badges\\badge3.png'
-    import badge4 from '.\\assets\\badges\\badge4.png'
-    import badge5 from '.\\assets\\badges\\badge5.png'
-    import badge6 from '.\\assets\\badges\\badge6.png'
+    import badge1 from './assets/badges/badge1.png'
+    import badge2 from './assets/badges/badge2.png'
+    import badge3 from './assets/badges/badge3.png'
+    import badge4 from './assets/badges/badge4.png'
+    import badge5 from './assets/badges/badge5.png'
+    import badge6 from './assets/badges/badge6.png'
 
 
     const BadgeStepper = () => {

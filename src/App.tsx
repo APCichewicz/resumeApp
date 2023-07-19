@@ -4,10 +4,7 @@ import axios from 'axios'
 import Stars from './stars'
 // import BadgeStepper from './BadgeStepper'
 import BadgeStepper from './BadgeStepper'
-import { InView } from 'react-intersection-observer';
 import './App.css'
-// import image from assets
-import hero from '.\\assets\\photo-1489549132488-d00b7eee80f1.avif'
 
 
 
@@ -16,12 +13,15 @@ function App() {
 
   const ref = useRef<HTMLDivElement>(null)
 
-  const getVistors = useEffect(() => {
-    axios.get('https://apcresumeapi.azure-api.net/apcvisitorcount/ResumeHttpTrigger?subscription-key=82b91c6d16254f6583170cd080fec7ac').then((res) => {
+  useEffect( () => {
+     axios.get('https://apcresumeapi.azure-api.net/apcvisitorcount/ResumeHttpTrigger?subscription-key=82b91c6d16254f6583170cd080fec7ac').then((res) => {
       setVisitorCount(res.data.value)
     }).then(() => {
       ref.current!.innerHTML = visitorCount.toString()
-    })
+    }).catch((err) => {
+      console.log(err)
+    }
+    )
   }, [])
 
 
