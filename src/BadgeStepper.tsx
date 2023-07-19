@@ -52,7 +52,7 @@
                         <div
                             key={index}
                             onClick={() => setbadge(index)}
-                            className={`w-4 h-4 m-2 rounded-full cursor-pointer ${index === currentBadge ? 'bg-black' : 'bg-gray-700'}`}
+                            className={`w-4 h-4 m-2 rounded-full cursor-pointer ${index === currentBadge ? 'bg-white' : 'bg-gray-700'}`}
                         />
                     ))}
                     <button onClick={nextBadge} className='px-4 py-2 m-2 text-white bg-black rounded-full hover:bg-gray-700'>Next</button>

@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef} from 'react'
-import axios from 'axios'
 // import stars from './stars'
 import Stars from './stars'
 // import BadgeStepper from './BadgeStepper'
@@ -14,14 +13,10 @@ function App() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect( () => {
-     axios.get('https://apcresumeapi.azure-api.net/apcvisitorcount/ResumeHttpTrigger?subscription-key=82b91c6d16254f6583170cd080fec7ac').then((res) => {
-      setVisitorCount(res.data.value)
-    }).then(() => {
-      ref.current!.innerHTML = visitorCount.toString()
-    }).catch((err) => {
-      console.log(err)
-    }
-    )
+     fetch('https://crc-function-app-01.azurewebsites.net/api/ResumeHttpTrigger').then(response => response.json()).then(res => {
+      setVisitorCount(res)
+      ref.current!.innerText = res
+    }).catch(err => console.log(err))
   }, [])
 
 
@@ -32,7 +27,7 @@ function App() {
             <div className='absolute top-0 left-0 w-screen px-32'>
                 <section className='grid items-center h-screen grid-cols-1 gap-8 font-semibold text-center place-content-center'>
                   <h2 className='text-4xl'>Welcome visitor number: <span ref={ref}
-                  className='font-bold text-9xl text-grel'
+                  className='text-6xl font-bold text-green-500'
                   ></span></h2>
                   <h1 className='font-bold text-8xl'>Andrew Cichewicz</h1>
                   <h2 className='text-5xl'>System Administrator and aspiring Cloud Engineer</h2>
