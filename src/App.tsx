@@ -65,8 +65,8 @@ function App() {
                       <p><a href="https://github.com/APCichewicz/blobwebapp">GitHub Link</a></p>
                     </div>
                     <div id="proj-2" className='col-start-2 row-start-2'>
-                      <h3 className='text-4xl'>Pipeline Conatiner Web App</h3>
-                      <p className='mb-4'>This project was an experiment with continuous integration and deployment It Includes:</p>
+                      <h3 className='text-4xl'>Pipeline Container Web App</h3>
+                      <p className='mb-4'>This project was an experiment with continuous integration and deployment. It Includes:</p>
                       <ul className='grid gap-2 list-decimal'>
                         <li>An Azure Devops organization configured with one microsoft hosted agent</li>
                         <li>A build pipeline that: 
