@@ -1,10 +1,25 @@
 import { useState, useEffect, useRef} from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import stars from './stars'
 import Stars from './stars'
 // import BadgeStepper from './BadgeStepper'
 import BadgeStepper from './BadgeStepper'
-import './App.css'
+import CarouselImg from './Carousel'
 
+// import all images from ./assets/blobprojectPictures
+import blob1 from './assets/blobprojectPictures/blob1.png'
+import blob2 from './assets/blobprojectPictures/blob2.png'
+import blob3 from './assets/blobprojectPictures/blob3.png'
+import blob4 from './assets/blobprojectPictures/blob4.png'
+import blob5 from './assets/blobprojectPictures/blob5.png'
+
+// import all images from ./assets/containerappimages
+import container1 from './assets/containerappimages/container1.png'
+import container2 from './assets/containerappimages/container2.png'
+import container3 from './assets/containerappimages/container3.png'
+
+
+import './App.css'
 
 
 function App() {
@@ -34,10 +49,46 @@ function App() {
                   <p className='font 4xl'>AndrewPaulCichewicz@gmail.com | (610) 955-5425 | Lansdowne, Pa 19050 | <a href="https://github.com/APCichewicz">Github</a></p>
                 </section>
 
+                <section className='grid min-h-screen grid-cols-2 gap-4 pb-24 auto-rows-min'>
+                  <h2 className='text-6xl '>PROJECTS</h2>
+                    <div id="proj-1" className='col-start-1 row-start-2'>
+                      <h3 className='mb-4 text-4xl'>Blob storage Static website</h3>
+                      <p className='mb-4'>This project was an experiment to set up entirely using Terraform. It Includes:</p>
+                      <ul className='grid gap-2 list-decimal'>
+                        <li>Storage Account configured to serve static sites</li>
+                        <li>A CDN/Front Door profile for faster delivery and SSL offloading</li>
+                        <li>Custom Domain - since repurposed to this site</li>
+                        <li>A CosmosDB setup using the Table API to keep track of visitor count</li>
+                        <li>An azure function API for GET requests written in python</li>
+                      </ul>
+                      <CarouselImg imgList={[blob1, blob2, blob3, blob4, blob5]} />
+                      <p><a href="https://github.com/APCichewicz/blobwebapp">GitHub Link</a></p>
+                    </div>
+                    <div id="proj-2" className='col-start-2 row-start-2'>
+                      <h3 className='text-4xl'>Pipeline Conatiner Web App</h3>
+                      <p className='mb-4'>This project was an experiment with continuous integration and deployment It Includes:</p>
+                      <ul className='grid gap-2 list-decimal'>
+                        <li>An Azure Devops organization configured with one microsoft hosted agent</li>
+                        <li>A build pipeline that: 
+                          <ul className='grid gap-2 list-disc'>
+                            <li>Is defined in YAML</li>
+                            <li>Is triggered by a commit on the main branch of the containing Github repository</li>
+                            <li>Builds a container image from the Dockerfile in the repository</li>
+                            <li>Pushes the container image to the Azure Container Registry</li>
+                          </ul>
+                        </li>
+                        <li>A release pipeline that deploys the container image to a web app</li>
+                        <li>This project re-uses the azure function and cosmosDB items from the Blob Static Site</li>
+                      </ul>
+                      <CarouselImg imgList={[container1, container2, container3]} />
+                      <p><a href="https://github.com/APCichewicz/resumeApp">GitHub Link</a></p>
+                    </div>
+                </section>
+
                 <section className='grid h-screen grid-cols-2 mb-8'>
                   <div className='grid grid-cols-1 gap-12 auto-rows-min'>
                     <h2 className='text-6xl'>CERTIFICATONS</h2>
-                    <ul className='grid col-start-1 gap-4 pl-16'>
+                    <ul className='grid grid-cols-2 col-start-1 gap-4 pl-16'>
                       <li>Microsoft Certified: Azure Administrator Associate</li>
                       <li>Microsoft Certified: Azure Solutions Architect Expert</li>
                       <li>Axelos ITIL 4 Foundations</li>
