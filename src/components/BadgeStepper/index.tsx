@@ -21,10 +21,10 @@ export const BadgeStepper = () => {
     const [index, setIndex] = React.useState(0)
     const badgeCount = 5
     const handleNext = () => {
-        setIndex((prevIndex) => (prevIndex + 1)%badgeCount)
+        setIndex((prevIndex) => prevIndex === badgeCount - 1 ? 0 : prevIndex + 1)
     }
     const handlePrev = () => {
-        setIndex((prevIndex) => (prevIndex - 1)%badgeCount)
+        setIndex((prevIndex) => prevIndex === 0 ? badgeCount - 1 : prevIndex - 1)
     }
     React.useEffect(() => {
         const interval = setInterval(() => {

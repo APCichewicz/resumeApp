@@ -43,3 +43,20 @@
     animation-delay: 1s;
     left: 2rem;
 }
+.flat-button {
+    color: #ffd700;
+    font-style: 1.3rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+    font-family: sans-serif;
+    padding: 1rem 1rem;
+    border: 1px solid #ffd700;
+    text-decoration: none;
+    margin-top: 1.25rem;
+    animation: fadeIn 1s 2.2s backwards;
+    white-space: nowrap;
+    &:hover {
+        color: #333;
+        background: #ffd700;
+    }
+}

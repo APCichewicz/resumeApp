@@ -91,6 +91,14 @@ const About = () => {
                         <li>Kubernetes</li>
                     </ul>
                     <h2>Interests</h2>
+                    <p>
+                        Outside of my professional pursuits, I have a range of interests that keep me both physically and mentally engaged. 
+                        I have a passion for strongman and powerlifting, which not only keeps me physically fit but also instills a strong discipline that carries over into my work. </p>
+                        <p>
+                        When it comes to intellectual stimulation, I am an avid reader and listener of sci-fi and fantasy books and audiobooks, exploring different worlds and ideas. 
+                        Being a programming enthusiast, I often engage in coding projects in my spare time, constantly looking for challenges to solve. </p>
+                        
+                        <p> Last but not least, I enjoy unwinding with video games, where I can immerse myself in diverse virtual landscapes.</p>
                 </div>
                 <div className='about-side'>
                     <div className='cert-section-title'>

@@ -1,6 +1,12 @@
 .about-page {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    letter-spacing: .1rem;
+    line-height: 130%;
+    // add an indent to all p tags first line
+    p {
+        text-indent: 4rem;
+    }
     h2 {
         color: #ffd700;
     }
@@ -13,8 +19,9 @@
         font-family: 'Coolvetica';
     }
     .about-content {
+        width: 90%;
         color: #fff;
-        grid-column: 3/10;
+        grid-column: 2/10;
         overflow-y: auto;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
