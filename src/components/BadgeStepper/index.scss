@@ -1,0 +1,42 @@
+.stepper-container {
+    .stepper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+        .stepper-image-container {
+            .stepper-image {
+                width: 50%;
+                height: auto;
+                object-fit: cover;
+                // round the border
+                border-radius: 50%;
+            }
+        }
+        .stepper-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            .stepper-button {
+                height: 50%;
+                width: 40%;
+                margin: auto;
+                border-radius: 10px;
+                background: #ffd700;
+                color: #181818;
+                border: none;
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+                letter-spacing: 0.1rem;
+                font-family: sans-serif;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: #181818;
+                    color: #ffd700;
+                }
+
+            }
+        }
+    }
+}

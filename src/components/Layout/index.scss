@@ -1,0 +1,45 @@
+.App {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    grid-template-rows: 100vh;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.top-tags {
+    bottom: auto;
+    top: 3rem;
+}
+.tags {
+    color: #ffd700;
+    opacity: 0.5;
+    bottom: 3rem;
+    font-size: 2rem;
+    left: 6rem;
+    position: absolute;
+    font-family: 'La Belle Aurore';
+}
+.bottom-tag-html {
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+}
+.container {
+    width: 95%;
+    height: 90%;
+    min-height: 556px;
+    will-change: contents;
+    position: absolute;
+    overflow: hidden;
+    top: 5%;
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+    left: 2rem;
+}

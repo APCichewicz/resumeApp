@@ -1,0 +1,81 @@
+.about-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    h2 {
+        color: #ffd700;
+    }
+    .title {
+        height: 5rem;
+        text-align: center;
+        grid-column: 1/13;
+        color: #ffd700;
+        font-size: 8rem;
+        font-family: 'Coolvetica';
+    }
+    .about-content {
+        color: #fff;
+        grid-column: 3/10;
+        overflow-y: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .about-side {
+        position: relative;
+        text-align: center;
+        grid-column: 10/13;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: grid;
+        grid-auto-rows: auto;
+        .cert-section-title {
+            grid-row: 1/2;
+            h2 {
+                color: #ffd700;
+                font-size: 4rem;
+                font-family: 'Coolvetica';
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 5%;
+            height: 100%;
+            background: #ffd700;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+    }
+    .skill-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        grid-row: 2/3;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        li {
+            color: #fff;
+            font-size: 2rem;
+            font-family: sans-serif;
+            margin-bottom: 1rem;
+            padding: 0;
+        }
+    }
+    .upcoming-certs {
+        color: #fff;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            li {
+                padding-left: 3rem;
+                font-size: 2rem;
+                font-family: sans-serif;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.home-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        max-height: 90%;
+    }
+    h1 {
+        color: #fff;
+        font-size: 7rem;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight:  400;
+        line-height: 1.2;
+        &::before {
+            font-family: 'la belle aurore';
+            content: '<h1>';
+            color: #ffd700;
+            font-size: 2rem;
+            position: absolute;
+            margin-top: 3rem;
+            left: -4rem;
+            opacity: 0.5;
+        }
+        &::after {
+            font-family: 'la belle aurore';
+            content: '</h1>';
+            color: #ffd700;
+            font-size: 2rem;
+            position: absolute;
+            margin-top:  4rem;
+            left: 26rem;
+            opacity: 0.5;
+        }
+        .letter-rotate {
+            font-size: 115%;
+            display: inline-block;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;
+        }
+
+    }
+    h2 {
+        color: #8d8d8d;
+        margin-top: 2rem;
+        font-weight: 400;
+        font-family: sans-serif;
+        letter-spacing: 0.1rem;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+    .flat-button {
+        color: #ffd700;
+        font-style: 1.3rem;
+        font-weight: 400;
+        letter-spacing: .4rem;
+        font-family: sans-serif;
+        padding: 1rem 1rem;
+        border: 1px solid #ffd700;
+        text-decoration: none;
+        margin-top: 1.25rem;
+        animation: fadeIn 1s 2.2s backwards;
+        white-space: nowrap;
+        &:hover {
+            color: #333;
+            background: #ffd700;
+        }
+    }
+}

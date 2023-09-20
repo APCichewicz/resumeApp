@@ -1,13 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
 
 body {
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
   padding: 0;
   margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font: 300 20px 'Helvetica Neue', sans-serif;
+  color: #444;
+  font-weight: 400;
+  background-color: #022c43;
+  overflow: hidden;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
